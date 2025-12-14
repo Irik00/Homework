@@ -33,7 +33,7 @@ func FindTask(db *gorm.DB) []Task {
 	var task []Task
 	err := db.Find(&task).Error
 	if err != nil {
-		fmt.Println(" Find failed: %v ", err)
+		fmt.Printf(" Find failed: %v ", err)
 	} else {
 		fmt.Println(" Find success! ", task)
 	}
